@@ -1,13 +1,14 @@
 import React from "react";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, View } from "react-native";
 import {stylesList} from './style'
 
-const listItem = ({onPressFn, value})=>{
+const listItem = ({title})=>{
 
     return(
-        <TouchableOpacity style={stylesList.itemContainer} onPress={onPressFn}>
-        <Text style={stylesList.item}>{value}</Text>
+        <TouchableOpacity style={stylesList.itemContainer}>
+            <Text style={stylesList.item}>{title}</Text>
         </TouchableOpacity>
+        
     )
 }
 

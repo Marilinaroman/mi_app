@@ -1,12 +1,13 @@
 import {StyleSheet} from 'react-native'
+import { theme } from '../../constants'
 
 export const stylesList = StyleSheet.create({
     itemContainer: {
-        height: 80,
+        height:80,
         justifyContent: 'center',
-        backgroundColor: '#52528C',
+        backgroundColor: theme.colors.primary,
         borderRadius: 5,
-        marginVertical: 5,
+        marginVertical: 10,
     },
     item: {
         marginHorizontal: 10,
