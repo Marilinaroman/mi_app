@@ -22,6 +22,6 @@ export const styleHeader = StyleSheet.create({
         fontSize:20,
         marginTop:20,
         color:theme.colors.textPrimary,
-        fontWeight:'bold'
+        fontFamily: 'Sans-Bold'
     }
 })

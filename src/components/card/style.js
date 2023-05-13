@@ -17,7 +17,7 @@ export const stylesDataUSer = StyleSheet.create({
         color:theme.colors.black,
         alignContent:'center',
         marginLeft:20,
-        fontWeight:'bold'
+        fontFamily:'Sans-Bold'
 
     }
 })
