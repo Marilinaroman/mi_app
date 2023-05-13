@@ -2,12 +2,18 @@ import React from "react";
 import { TextInput, Button, View } from "react-native";
 import {stylesInput} from './styles'
 
-const Input = ({placeholder, value, onChangeText,onHandlerButton,titleButton})=>{
+const Input = ({placeholder, value, onChangeText})=>{
 
     return(
         <View style={stylesInput.inputContainer}>
-            <TextInput placeholder={placeholder} style={stylesInput.input}  value={value} onChangeText={(text)=>onChangeText(text)}/>
-            <Button title={titleButton} onPress={onHandlerButton}/>
+            <TextInput autocorrect={false} 
+            placeholder={placeholder} 
+            style={stylesInput.input}  
+            value={value} 
+            blurOnSubmit
+            autoCapitalize="none"
+            autoCorrect={false}
+            onChangeText={(text)=>onChangeText(text)}/>
         </View>
     )
 }

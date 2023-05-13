@@ -1,13 +1,14 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from "react-native";
+import {theme} from '../constants'
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
-    listContainer: {
-        flex: 1,
-        backgroundColor: '#fff',
-        marginVertical: 20,
+    buttonConfirm:{
+        borderBottomColor:theme.colors.secundary,
+        width:'80%',
+        borderBottomWidth:1,
+        color:theme.colors.secundary
+
+
     }
+
 })
