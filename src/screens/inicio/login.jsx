@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Button, View } from "react-native";
 import { Input } from "../../components";
 import {styles } from "../../style/style";
-import {Profile} from '../profile'
+import useOrientation from '../../hooks/usePortrait'
 
-const login =()=>{
+const Login =({navigation})=>{
 
     const [usuario, setUsuario] = useState({
         email:'',
         password:''
     })
     
-
+    const {isPortrait} = useOrientation()
     
     return(
         <View>
@@ -27,10 +27,13 @@ const login =()=>{
             />
             <Button title="Ingresar" style={styles.buttonConfirm}
             disabled={usuario.email===''  || usuario.password===''}
+            onPress={()=>navigation.navigate('Profile')}
+            />
+            <Button title="Registrarme" onPress={()=>navigation.navigate('SignUp')}
             />
         
         </View>
     )
 }
 
-export default login 
+export default Login 

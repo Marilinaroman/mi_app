@@ -7,6 +7,7 @@ import {  useState } from 'react';
 import { Button } from 'react-native';
 import { useFonts } from 'expo-font';
 import { ActivityIndicator } from 'react-native';
+import Navigation from './navigation';
 
 export default function App() {
 
@@ -28,6 +29,7 @@ export default function App() {
     )
 
     return(
+        <Navigation>
         <View>
             <Header title={'My Services'}/>
             <Content />
@@ -36,6 +38,8 @@ export default function App() {
             
 
         </View>
+
+        </Navigation>
 
     )
 }

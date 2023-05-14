@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, View } from "react-native";
 import { Input } from "../../components";
 
-const signUp =()=>{
+const SignUp =({navigation})=>{
     const [usuario, setUsuario] = useState({
         email:'',
         password:'',
@@ -25,9 +25,11 @@ const signUp =()=>{
                 onChangeText={(text) => setUsuario({...usuario, passwordSame:text})}
                 value={usuario.passwordSame}
             />
+            <Button title="Registrarme"/>
+            <Button title="Iniciar sesion" onPress={()=>navigation.navigate('Login')} />
         </View>
 
     )
 }
 
-export default signUp 
+export default SignUp 
