@@ -2,14 +2,13 @@ import React from "react";
 import { View } from "react-native";
 import { Header } from "../../components";
 
-const reservas =()=>{
+const Turnos =()=>{
 
     return(
         <View>
-            <Header title={'Mis Reservas'}/>
         </View>
 
     )
 }
 
-export default reservas
+export default Turnos

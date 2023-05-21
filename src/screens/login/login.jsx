@@ -27,7 +27,7 @@ const Login =({navigation})=>{
             />
             <Button title="Ingresar" style={styles.buttonConfirm}
             disabled={usuario.email===''  || usuario.password===''}
-            onPress={()=>navigation.navigate('Profile')}
+            onPress={()=>navigation.navigate('Home')}
             />
             <Button title="Registrarme" onPress={()=>navigation.navigate('SignUp')}
             />
