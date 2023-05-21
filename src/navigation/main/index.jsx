@@ -9,7 +9,7 @@ const MainNavigator =()=>{
         <Stack.Navigator initialRouteName="Login"
         screenOptions={{
             headerStyle:{
-            backgroundColor: theme.colors.secundary},
+            backgroundColor: theme.colors.primary},
             headerTitleStyle:{
                 fontFamily:'Sans-Bold'
             },
@@ -19,12 +19,6 @@ const MainNavigator =()=>{
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="SignUp" component={SignUp} />
-            <Stack.Screen name="Servicios" component={Servicios} />
-            <Stack.Screen name="Turnos" component={Turnos} />
-            <Stack.Screen name="Pagos" component={Pagos} />
-            <Stack.Screen name="Profile" component={Profile} options={({route})=>({
-                title:route.params.title
-            })} />
 
         </Stack.Navigator>
 

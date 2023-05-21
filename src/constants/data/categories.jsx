@@ -20,7 +20,7 @@ export const categories =[
     },
     {
         id:4,
-        title:'pagos',
+        title:'Pagos',
         color:theme.colors.primary,
         screen:'Pagos'
     }

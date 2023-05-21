@@ -7,24 +7,10 @@ import { stylesHome } from "./style";
 const Home =({navigation})=>{
 
 
-    const onSelected =(item)=>{
-        if(item) return navigation.navigate(item.screen,{
-            title: item.title
-        })
-    }
-
-    const renderItem = ({item})=>(
-        <ListItem item={item} styleContainer={stylesHome.contentContainer}  styleText={stylesHome.text} onSelected={onSelected}/>
-    )
 
     return(
         <SafeAreaView style={stylesHome.container}>
             <View style={stylesHome.containerList}>
-                <List
-                    itemRender={renderItem}
-                    infoData={categories}
-                    keyExtractor={(item)=>item.id}
-                />
 
             </View>
             </SafeAreaView>

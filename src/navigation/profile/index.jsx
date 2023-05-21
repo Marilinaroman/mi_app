@@ -18,7 +18,7 @@ const ProfileNavigator = () => {
             fontFamily: "Sans-Bold",
             },
         }}>
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Perfil" component={Profile} />
         </Stack.Navigator>
     );
 };
