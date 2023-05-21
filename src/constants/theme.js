@@ -6,6 +6,7 @@ export const theme ={
         textPrimary:'#f3fadc',
         white:'#FFFFFF',
         black:'#000000',
-        grey:'#D9D9D9'
+        grey:'#D9D9D9',
+        tabsBar:'E9EFE6',
 }
 }
