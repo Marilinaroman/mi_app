@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 import { Header, List, ListItem, CardUser, CardItem } from "../../components/index";
+import { useSelector } from "react-redux";
 import{stylesProfile} from './style'
 
 const Profile =()=>{
-
     
-
-    const user =[
-        { 
-        id:1,
-        name:'Marilina',
-        img: 'https://s1.abcstatics.com/media/play/2020/09/29/avatar-kE4H--1024x512@abc.jpeg'
-        }]
-
+    const user = useSelector((state)=> state.users.data)
 
     const renderCard =({item})=>(
         <CardItem {...item}/>

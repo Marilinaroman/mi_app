@@ -9,6 +9,8 @@ import { useFonts } from 'expo-font';
 import { ActivityIndicator } from 'react-native';
 import {LocaleConfig} from 'react-native-calendars';
 import Navigation from './navigation';
+import { Provider } from 'react-redux';
+import store from './store';
 
 LocaleConfig.locales['Es'] = {
     monthNames: [
@@ -55,6 +57,7 @@ export default function App() {
     )
 
     return(
+        <Provider store={store}>
         <Navigation>
         <View>
             <Header title={'My Services'}/>
@@ -66,6 +69,8 @@ export default function App() {
         </View>
 
         </Navigation>
+
+        </Provider>
 
     )
 }
