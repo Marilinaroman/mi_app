@@ -1,0 +1,1 @@
+export const FIREBASE_REALTIME_DB_URL = 'https://appmisactividades-default-rtdb.firebaseio.com/'

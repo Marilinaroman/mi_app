@@ -1,17 +1,17 @@
 export const MisServicios = [
     {
         id:1,
-        title:'Uñas',
-        person:'Mar'
+        title:'Funcional',
+        days:['martes','jueves']
     },
     {
         id:2,
-        title:'Pestañas',
-        person:'Mar'
+        title:'Musculacion',
+        days:['miercoles','viernes']
     },
     {
         id:3,
-        title:'Peluqueria',
-        person:'Mar'
+        title:'Acrobacias',
+        days:['lunes']
     }
 ]

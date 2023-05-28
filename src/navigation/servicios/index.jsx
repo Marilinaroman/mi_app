@@ -18,7 +18,7 @@ const ServiciosNavigator = () => {
           fontFamily: "Sans-Bold",
         },
       }}>
-      <Stack.Screen name="Servicios" component={Servicios} />
+      <Stack.Screen name="Actividades" component={Servicios} />
     </Stack.Navigator>
   );
 };
