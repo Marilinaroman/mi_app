@@ -46,7 +46,7 @@ const TabsNavigator = () => {
             tabBarLabelStyle:{
                 color:theme.colors.secundary
             },
-            tabBarIcon: ({ focused, size }) => (
+            /* tabBarIcon: ({ focused, size }) => (
                 <Animated.View >
                     <Ionicons name={focused ? "person-circle" : "person-circle-outline"} size={size} color={focused? theme.colors.primary : theme.colors.secundary} />
                     </Animated.View>
@@ -56,7 +56,7 @@ const TabsNavigator = () => {
             tabBarLabel: "Servicios",
             tabBarLabelStyle:{
                 color:theme.colors.secundary
-            },
+            }, */
             tabBarIcon: ({ focused, size }) => (
                 <Animated.View >
                     <Ionicons name={focused ? "ios-add-circle" : "ios-add-circle-outline"} size={size} color={focused? theme.colors.primary : theme.colors.secundary} />

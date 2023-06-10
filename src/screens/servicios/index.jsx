@@ -1,32 +1,39 @@
 import React, { useState } from "react";
 import { Button, View, TouchableOpacity, Image, Text } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Header, List, ServiciosItem, ModalItem} from "../../components";
+import { Header, List, ServiciosItem, ModalItem, SelectionList} from "../../components";
 import { stylesService } from "./style";
 import { Animated } from "react-native";
 import { MisServicios } from "../../constants/data";
 import { theme } from "../../constants";
+import { MultipleSelectList } from 'react-native-dropdown-select-list'
 
 const Servicios =()=>{
 
     const [modalVisible, setModalVisible] = useState(false)
-    const [selected, setSelected] = useState()
+    const [service, setService] = useState(MisServicios)
+    const [userSelection, setUserSelection] = useState()
+    const [actSelected, setActSelected] = useState()
 
+    
     const onHandlerCancelModal =()=>{
         setModalVisible(!modalVisible);
     }
+
     const onHandlerDeleteModal =()=>{
-        const id = selected ? selected.id : ''
-        
+        const id = userSelection ? userSelection.id : ''
+        let newService = service.filter((e)=>e.id !== id)
+        setService(newService)
+        setModalVisible(!modalVisible);
     }
 
     const onHandlerModal = (item) => {
-        setSelected(item)
+        setUserSelection(item)
         setModalVisible(!modalVisible)
     }
 
     const addService =()=>{
-
+        setModalSelectionVisible(!modalVisible)
     }
 
 
@@ -34,21 +41,25 @@ const Servicios =()=>{
         <ServiciosItem item={item} styleContainer={stylesService.list} onHandlerModal={onHandlerModal}/>
     )
 
+    
+
+    console.log(data);
     return(
         <View style={stylesService.container}>
-            <TouchableOpacity
-            style={stylesService.add}
-            onPress={addService}
-            activeOpacity={0.5}>
-            <Animated.View style={stylesService.img}>
-                    <Ionicons name={"add-circle"} size={28} color={theme.colors.primary} />
-                    </Animated.View>
-            <Text style={stylesService.text}>Nueva Actividad</Text>
-            </TouchableOpacity>
+            <View>
+                <MultipleSelectList 
+                    setSelected={(val) => setActSelected(val)}
+                    data={data} 
+                    save="value"
+                    placeholder={'Agregar '}
+                />
+            </View>
+
+
             <View style={stylesService.listContainer}>
                     <List
                         itemRender={renderItem}
-                        infoData={MisServicios}
+                        infoData={service}
                         keyExtractor={(item)=>item.id}
                         onHandlerModal={onHandlerModal}
                         

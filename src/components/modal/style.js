@@ -31,3 +31,10 @@ export const styleModal = StyleSheet.create({
         marginHorizontal: 20,
     }
 })
+export const styleModalSelection = StyleSheet.create({
+    modalContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 50,
+    }
+})

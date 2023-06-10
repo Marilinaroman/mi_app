@@ -17,7 +17,7 @@ const modalItem = ({isVisible, animationType, onCancel, onDelete})=>{
                         </TouchableOpacity>
                         <TouchableOpacity
                             activeOpacity={0.8}
-                            onPress={onCancel}
+                            onPress={onDelete}
                             style={styleModal.buttonDelete}>
                             <Text >Eliminar</Text>
                         </TouchableOpacity>
