@@ -3,7 +3,7 @@ import {styleImageSelector} from './style'
 import { useState } from "react";
 import {requestCameraPermissionsAsync, launchCameraAsync} from 'expo-image-picker'
 
-export const ImageSelector = (onImage)=>{
+export const ImageSelector = ({onImage})=>{
 
     const [picked, setPicked] = useState(null)
 
@@ -17,8 +17,8 @@ export const ImageSelector = (onImage)=>{
             quality: 0.7
         })
 
-        setPicked(image.uri)
-        onImage(image.uri)
+        setPicked(image.assets[0].uri)
+        onImage(image.assets[0].uri)
 
     }
 

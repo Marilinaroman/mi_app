@@ -3,9 +3,12 @@ import { userTypes } from "../types/user.types";
 
 const {ADD_USER, SELECT_USER} = userTypes
 
+
+
 export const addUserToDB = (user)=>{
     console.log(user);
     return async (dispatch) =>{
+        
         try{
             const response = await fetch(`${FIREBASE_REALTIME_DB_URL}/users.json`,{
                 method:'POST',

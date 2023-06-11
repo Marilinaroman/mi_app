@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Button, View } from "react-native";
 import { ImageSelector, Input } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
-import { addUserToDB } from "../../store/actions/users.action";
+import { addUserToDB } from "../../store/actions";
+import {saveImg} from '../../store/actions'
 import {style} from './style'
 
 const SignUp =({navigation})=>{
@@ -18,6 +19,12 @@ const SignUp =({navigation})=>{
     const onConfirmRegister = ()=>{
         dispatch(addUserToDB(usuario))
     }
+
+    const onImage= (uri)=>{
+        setUsuario({...usuario,img:uri})
+        dispatch(saveImg(uri))
+    }
+    
     
     
     return(
@@ -40,7 +47,7 @@ const SignUp =({navigation})=>{
                 onChangeText={(text) => setUsuario({...usuario, lastname:text})}
                 value={usuario.lastname}
             />
-            <ImageSelector />
+            <ImageSelector onImage={onImage} />
             <Button title="Registrarme" onPress={onConfirmRegister}/>
             <Button title="Iniciar sesion" onPress={()=>navigation.navigate('Login')} />
         </View>
