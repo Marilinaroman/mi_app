@@ -1,4 +1,7 @@
 import { users } from "../../constants/data/users"
+import { userTypes } from "../types/user.types"
+
+const {ADD_USER, SELECT_USER} = userTypes
 
 const initialState = {
     data: users,
@@ -6,7 +9,12 @@ const initialState = {
 }
 
 const UsersReducer = (state = initialState ,action)=>{
-    return state
+    switch(action.type){
+        case ADD_USER:
+            return {data:[...users]}
+        default:
+            return state
+    }
 }
 
 export default UsersReducer

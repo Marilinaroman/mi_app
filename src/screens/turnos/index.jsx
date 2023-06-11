@@ -14,10 +14,12 @@ const Turnos =()=>{
     
     const addActivity=()=>{
         setSelected([selected,{...activity, days:days, hour:hour}])
-        console.log(selected);
+        setDays('')
+        setHour('')
+        setActivity('')
     }
 
-    
+    console.log(selected);
     
 
     return(
@@ -26,7 +28,6 @@ const Turnos =()=>{
 
             <TouchableOpacity
             style={stylesTurno.selectList}
-            
             >
                 <Select info={activity.title} data={MisServicios} onSelect={setActivity} />
             </TouchableOpacity>
@@ -42,6 +43,7 @@ const Turnos =()=>{
             </TouchableOpacity>
 
             <TouchableOpacity
+            disabled={!activity}
             onPress={addActivity}>
                 <Text>Aceptar</Text>
             </TouchableOpacity>
