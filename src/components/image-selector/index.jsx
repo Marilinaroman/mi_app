@@ -17,6 +17,7 @@ export const ImageSelector = ({onImage})=>{
             quality: 0.7
         })
 
+        
         setPicked(image.assets[0].uri)
         onImage(image.assets[0].uri)
 
@@ -29,7 +30,6 @@ export const ImageSelector = ({onImage})=>{
             Alert.alert('Permiso denegado', 'Necesitamos permisos para acceder a la camara', [{text:'Ok'}])
             return false
         }
-
         return true
     }
 

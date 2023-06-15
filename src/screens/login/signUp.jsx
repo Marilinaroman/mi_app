@@ -21,8 +21,7 @@ const SignUp =({navigation})=>{
     }
 
     const onImage= (uri)=>{
-        setUsuario({...usuario,img:uri})
-        dispatch(saveImg(uri))
+        setUsuario({...usuario,img:uri}) && dispatch(saveImg(uri))
     }
     
     

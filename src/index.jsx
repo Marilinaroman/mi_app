@@ -11,6 +11,16 @@ import {LocaleConfig} from 'react-native-calendars';
 import Navigation from './navigation';
 import { Provider } from 'react-redux';
 import store from './store';
+import {init } from './db'
+
+init()
+    .then(()=>{
+        console.log('Initialized database');
+    })
+    .catch((err)=>{
+        console.log('Initialized database failed')
+        console.log(err);
+    })
 
 LocaleConfig.locales['Es'] = {
     monthNames: [
