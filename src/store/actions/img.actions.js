@@ -29,9 +29,9 @@ export const saveImg = (uri) =>{
 export const loadImage = ()=>{
     return async(dispatch)=>{
         try {
-             const result = await selectData()
-             console.log(result)
-             dispatch({type:SELECT_DATA, data:result.rows._array})
+            const result = await selectData()
+            console.log(result)
+            dispatch({type:SELECT_DATA, data:result?.rows?._array})
         } catch (error) {
             console.log(error);
         }
