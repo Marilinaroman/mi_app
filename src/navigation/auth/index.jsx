@@ -1,10 +1,10 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login, Profile, SignUp,Home, Servicios, Turnos, Pagos } from "../../screens";
+import { Login } from "../../screens";
 import { theme } from "../../constants"
 
 const Stack = createNativeStackNavigator()
 
-const MainNavigator =()=>{
+const LoginNavigator =()=>{
     return(
         <Stack.Navigator initialRouteName="Login"
         screenOptions={{
@@ -16,13 +16,11 @@ const MainNavigator =()=>{
             headerTintColor: theme.colors.textPrimary
         }}
         >
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="SignUp" component={SignUp} />
+            <Stack.Screen name="Auth" component={Login} />
 
         </Stack.Navigator>
 
     )
 }
 
-export default MainNavigator
+export default LoginNavigator

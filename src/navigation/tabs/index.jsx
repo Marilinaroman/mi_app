@@ -5,7 +5,7 @@ import { Animated } from "react-native";
 import ProfileNavigator from "../profile";
 import ServiciosNavigator from "../servicios";
 import TurnosNavigator from "../turnos";
-import MainNavigator from "../main";
+import MainNavigator from "../auth";
 
 const BottomTab = createBottomTabNavigator();
 
